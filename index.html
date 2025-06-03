@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Anenni sikebilirmiyim?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: #f0f0f0;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 15px 30px;
+      margin: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    #yes:hover {
+      transform: scale(1.2);
+      background-color: pink;
+    }
+
+    #no:hover {
+      transform: scale(0.8);
+      background-color: gray;
+    }
+
+    .hearts {
+      display: none;
+      font-size: 50px;
+      margin-top: 30px;
+      animation: explode 1s ease-in-out;
+    }
+
+    @keyframes explode {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Anneni sikebilirmiyim?</h1>
+  <div class="buttons">
+    <button id="yes">sikebilirsin</button>
+    <button id="no">sikemezsin</button>
+  </div>
+  <div class="hearts" id="hearts">ADAMSINN ARTIK SENİN BABANIM</div>
+
+  <script>
+    document.getElementById("yes").onclick = function() {
+      document.getElementById("hearts").style.display = "block";
+    };
+  </script>
+</body>
+</html>
